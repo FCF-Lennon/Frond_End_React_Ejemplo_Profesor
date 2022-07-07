@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+// en react se trabaja con componentes que pueden ser funciones o clases
 
-function App() {
+function App (props) { 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    /* ocuparemos en jsx  el parametro props = propiedadeas para hacer referencia 
+    a un atributo dentro de React.StrictMode en index.js desde una funcion*/
 
-export default App;
+    <div className = "div">hola {props.name}</div>
+  )
+}      
+
+/* se deben exportar todos los componentes para que puedan ser utilizados por 
+otros componentes que tengan que importar el componente App */
+
+export default App 
